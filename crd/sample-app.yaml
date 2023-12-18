@@ -1,0 +1,17 @@
+apiVersion: example.com/v1
+kind: Microservice
+metadata:
+  name: tx-microservice
+spec:
+  applicationName: "sample-app-tx"
+  # Add other specifications for the TX microservice
+
+---
+
+apiVersion: example.com/v1
+kind: Microservice
+metadata:
+  name: rx-microservice
+spec:
+  applicationName: "sample-app-rx"
+  # Add other specifications for the RX microservice

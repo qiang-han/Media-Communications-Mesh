@@ -1,0 +1,19 @@
+apiVersion: devices.example.com/v1
+kind: IPCamera
+metadata:
+  name: example-ipcamera
+spec:
+  ip: 192.168.1.100
+  username: admin
+  password: secret
+  resolution: "1920x1080"
+  model: "ExampleModel123"
+  location: "Office"
+  codec: "H.264"
+  streamingProtocol: "RTSP"
+  fps: 30  # Frames per second
+  audioSupport: true
+  ptzSupport: true  # Pan-Tilt-Zoom support
+  motionDetection: true
+  infraredSupport: true
+  # Add any additional parameters here
