@@ -1,0 +1,13 @@
+apiVersion: mcm.dev/v1
+kind: TranscodingStream
+metadata:
+  name: video-transcoder-h264-h265
+  namespace: mcm
+spec:
+  name: video-transcoder-h264-h265
+  input: |
+    m=video 5004 RTP/AVP 96
+    a=rtpmap:96 H264/90000
+  output: |
+    m=video 5006 RTP/AVP 97
+    a=rtpmap:97 H265/90000

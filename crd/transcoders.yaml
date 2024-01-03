@@ -1,0 +1,32 @@
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: transcoders.mcm.dev
+spec:
+  scope: Namespaced
+  group: mcm.dev
+  versions:
+    - name: v1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            spec:
+              type: object
+              properties:
+                name:
+                  type: string
+                input:
+                  type: string
+                  description: "SDP format for input stream"
+                output:
+                  type: string
+                  description: "SDP format for output stream"
+  names:
+    kind: TranscodingStream
+    plural: transcoders
+    singular: transcoder
+    shortNames:
+      - ts

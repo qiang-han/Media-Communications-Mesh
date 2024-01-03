@@ -1,0 +1,13 @@
+apiVersion: mcm.dev/v1
+kind: VideoStream
+metadata:
+  name: video-encoder-av1
+  namespace: mcm
+spec:
+  name: video-encoder-av1
+  input: |
+    m=video 5004 RTP/AVP 96
+    a=rtpmap:96 RAW-YUV;framesize:96 1920-1080;framerate=30
+  output: |
+    m=video 5006 RTP/AVP 97
+    a=rtpmap:97 AV1/90000
